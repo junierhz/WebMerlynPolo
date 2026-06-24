@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merlyn Polo Olaya — Inversión Inmobiliaria Premium</title>
+  <meta name="description" content="Especialistas en inversión inmobiliaria con proyectos de lotes en condominio. Planificación, legalidad 100% y alta plusvalía en el Caribe.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for elegant icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0D1B2A',
+              light: '#1B2A4A',
+              dark: '#050B14'
+            },
+            gold: {
+              DEFAULT: '#E5BA73',
+              light: '#F5D093',
+              dark: '#C49B55'
+            },
+            linen: {
+              DEFAULT: '#E5E5E5',
+              light: '#F5F5F5',
+              dark: '#CCCCCC'
+            },
+            cream: '#FAFAFA'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+            luxury: '.15em'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium Editorial Overrides */
+    body {
+      background-color: #FAFAFA;
+      color: #0D1B2A;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-serif-editorial {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Subtle texture overlay to mimic luxury paper */
+    .paper-texture {
+      position: relative;
+    }
+    .paper-texture::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity: 0.02;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Custom line animations */
+    .hover-gold-line {
+      position: relative;
+    }
+    .hover-gold-line::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: -4px;
+      left: 0;
+      background-color: #E5BA73;
+      transform-origin: bottom right;
+      transition: transform 0.4s ease-out;
+    }
+    .hover-gold-line:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    /* Form input styling */
+    .input-editorial {
+      border: none;
+      border-bottom: 1px solid #E5E5E5;
+      background: transparent;
+      padding: 0.75rem 0.25rem;
+      transition: all 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .input-editorial:focus {
+      outline: none;
+      border-bottom-color: #E5BA73;
+      box-shadow: none;
+    }
+
+    /* Modal styles */
+    .modal-overlay {
+      background-color: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="paper-texture antialiased select-none">
+
+  <!-- TOP BRAND STRIP -->
+  <div class="w-full bg-navy text-cream text-[10px] tracking-[0.25em] uppercase py-2.5 text-center font-medium border-b border-gold/20 px-4">
+    Inversión Inmobiliaria Exclusiva en el Caribe colombiano
+  </div>
+
+  <!-- NAVIGATION BAR (Navbar) -->
+  <nav class="sticky top-0 z-50 bg-[#FAFAFA]/95 backdrop-blur-md border-b border-gold w-full transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      
+      <!-- Logotipo -->
+      <a href="#inicio" class="flex items-center space-x-3 group">
+        <img src="MERLYN POLO LOGO.svg" alt="Merlyn Polo Olaya Logo" class="h-8 w-auto object-contain transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/180x60/0d1b2a/e5ba73?text=MERLYN+POLO'">
+      </a>
+
+      <!-- Enlaces de Navegación (Escritorio) -->
+      <div class="hidden lg:flex items-center space-x-8 xl:space-x-12">
+        <a href="#inicio" class="text-[11px] font-semibold uppercase tracking-luxury text-navy hover:text-gold transition duration-300 hover-gold-line">Inicio</a>
+        <a href="#proyectos" class="text-[11px] font-semibold uppercase tracking-luxury text-navy hover:text-gold transition duration-300 hover-gold-line">Proyectos</a>
+        <a href="#nosotros" class="text-[11px] font-semibold uppercase tracking-luxury text-navy hover:text-gold transition duration-300 hover-gold-line">Nosotros</a>
+        <a href="#invertir" class="text-[11px] font-semibold uppercase tracking-luxury text-navy hover:text-gold transition duration-300 hover-gold-line">¿Por qué invertir?</a>
+        <a href="#faq" class="text-[11px] font-semibold uppercase tracking-luxury text-navy hover:text-gold transition duration-300 hover-gold-line">FAQ</a>
+      </div>
+
+      <!-- CTA + Hamburguesa -->
+      <div class="flex items-center space-x-6">
+        <a href="#contacto" class="hidden sm:inline-block border border-gold hover:bg-gold hover:text-navy text-navy text-[11px] font-semibold uppercase tracking-widest px-6 py-2.5 transition-all duration-300 rounded-none">
+          Contactar
+        </a>
+        
+        <!-- Botón Móvil -->
+        <button id="mobile-menu-btn" class="lg:hidden text-navy focus:outline-none" aria-label="Abrir menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL (Overlay) -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-navy text-cream flex flex-col justify-center items-center space-y-8 transition-all duration-500 ease-in-out opacity-0 pointer-events-none">
+    <button id="close-menu-btn" class="absolute top-8 right-8 text-cream focus:outline-none" aria-label="Cerrar menú">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <a href="#inicio" class="mobile-link text-2xl font-serif-editorial tracking-widest hover:text-gold transition">Inicio</a>
+    <a href="#proyectos" class="mobile-link text-2xl font-serif-editorial tracking-widest hover:text-gold transition">Proyectos</a>
+    <a href="#nosotros" class="mobile-link text-2xl font-serif-editorial tracking-widest hover:text-gold transition">Nosotros</a>
+    <a href="#invertir" class="mobile-link text-2xl font-serif-editorial tracking-widest hover:text-gold transition">¿Por qué invertir?</a>
+    <a href="#faq" class="mobile-link text-2xl font-serif-editorial tracking-widest hover:text-gold transition">FAQ</a>
+    <a href="#contacto" class="mobile-link text-2xl font-serif-editorial tracking-widest hover:text-gold transition">Contacto</a>
+    
+    <div class="pt-12 text-center text-xs tracking-widest text-gold">
+      MERLYN POLO OLAYA
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: HERO / BANNER PRINCIPAL -->
+  <header id="inicio" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Fondo local con overlay editorial -->
+    <div class="absolute inset-0">
+      <img src="IMAGEN BANNER HERO.jpeg" alt="Caribe" class="w-full h-full object-cover object-center scale-105 animate-[zoom-slow_20s_infinite]" onerror="this.src='https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1920'">
+      <div class="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent"></div>
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20 text-cream w-full">
+      <div class="max-w-3xl space-y-6">
+        
+        <div class="flex items-center space-x-3">
+          <span class="h-px w-8 bg-gold"></span>
+          <p class="text-[11px] md:text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            Inversión Inteligente en el Caribe
+          </p>
+        </div>
+        
+        <p class="text-xs md:text-sm tracking-widest uppercase text-linen/80">
+          Lotes en condominio con planificación y respaldo legal.
+        </p>
+
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif-editorial font-light leading-none tracking-tight">
+          Invierte en <br>
+          <span class="italic text-gold">Lotes con Futuro.</span>
+        </h1>
+
+        <p class="text-sm md:text-base text-linen/90 leading-relaxed font-light max-w-2xl">
+          Proyectos inmobiliarios en condominio con plusvalía garantizada, ubicación estratégica y legalidad 100% respaldada. Pensados para construir y valorizar en el tiempo.
+        </p>
+
+        <div class="pt-6 flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <a href="#proyectos" class="bg-gold hover:bg-gold-dark text-navy text-xs font-bold uppercase tracking-widest px-8 py-4 transition-all duration-300 text-center">
+            Conoce nuestros proyectos
+          </a>
+          <a href="#contacto" class="border border-cream hover:bg-cream hover:text-navy text-cream text-xs font-bold uppercase tracking-widest px-8 py-4 transition-all duration-300 text-center">
+            Asesoría Personalizada
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Decorative Corner Page Indicator (Editorial Style) -->
+    <div class="absolute bottom-8 right-12 hidden md:flex items-center space-x-4 text-xs tracking-widest text-cream/60">
+      <span class="font-serif-editorial italic">Merlyn Polo Olaya</span>
+      <span class="h-px w-12 bg-cream/40"></span>
+      <span>01 / 06</span>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 2: NUESTROS PROYECTOS (Luxury Slider) -->
+  <section id="proyectos" class="py-24 max-w-7xl mx-auto px-6 lg:px-12 border-b border-linen">
+    
+    <!-- Encabezado de Sección -->
+    <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between">
+      <div class="space-y-3">
+        <p class="text-[10px] font-bold tracking-widest text-gold uppercase">Portafolio Seleccionado</p>
+        <h2 class="text-4xl md:text-5xl font-serif-editorial font-light text-navy">
+          Descubre las mejores oportunidades de inversión
+        </h2>
+      </div>
+      <div class="mt-4 md:mt-0 text-[11px] tracking-widest text-navy/60 uppercase">
+        Lotes en Condominio
+      </div>
+    </div>
+
+    <!-- Slider Container (Classic Premium Editorial Style) -->
+    <div class="relative bg-white border border-linen py-6 px-12 md:py-8 md:px-16 lg:py-12 lg:px-20 overflow-hidden shadow-sm">
+      
+      <!-- Minimalist Side Arrows -->
+      <button onclick="prevProjectSlide()" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-linen bg-[#FAFAFA]/90 hover:bg-gold text-navy hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-sm focus:outline-none" aria-label="Proyecto Anterior">
+        <i class="fa-solid fa-chevron-left text-xs"></i>
+      </button>
+      <button onclick="nextProjectSlide()" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-linen bg-[#FAFAFA]/90 hover:bg-gold text-navy hover:text-navy hover:border-gold flex items-center justify-center transition-all shadow-sm focus:outline-none" aria-label="Proyecto Siguiente">
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </button>
+
+      <!-- Slides Wrapper -->
+      <div class="relative min-h-[450px]">
+        
+        <!-- PROYECTO 1: MAYATT (Activo por defecto) -->
+        <div class="project-slide flex flex-col lg:flex-row gap-8 lg:gap-16 transition-all duration-500 opacity-100">
+          <!-- Columna Imagen -->
+          <a href="mayatt.html" class="lg:w-7/12 relative aspect-[16/10] overflow-hidden border border-linen p-2 bg-cream block">
+            <span class="absolute top-4 left-4 z-10 bg-navy text-gold text-[9px] font-bold tracking-[0.2em] uppercase px-3 py-1.5 border border-gold/30">
+              Disponible
+            </span>
+            <img src="Mayatt portada.jpeg" alt="Proyecto Mayatt" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://placehold.co/800x500/0d1b2a/e5ba73?text=MAYATT+COSTA'">
+          </a>
+          <!-- Columna Texto -->
+          <div class="lg:w-5/12 flex flex-col justify-between space-y-6 lg:space-y-0">
+            <div class="space-y-6">
+              <div class="border-b border-linen pb-4">
+                <span class="text-xs text-gold uppercase tracking-widest font-semibold block mb-1">PROYECTO DESTACADO</span>
+                <h3 class="text-4xl font-serif-editorial text-navy hover:text-gold transition"><a href="mayatt.html">Mayatt</a></h3>
+              </div>
+              <p class="text-sm text-navy/70 leading-relaxed font-light">
+                Exclusivo desarrollo de lotes en condominio frente al mar en el Caribe colombiano. Cuenta con vías internas pavimentadas, seguridad privada, club de playa, piscinas y áreas recreativas rodeadas de un entorno natural virgen. Diseñado para garantizar plusvalía y construir un estilo de vida inigualable.
+              </p>
+              <div class="text-[11px] uppercase tracking-widest text-navy/60 font-medium">
+                <i class="fa-solid fa-map-marker-alt text-gold mr-1.5"></i> Caribe Colombiano
+              </div>
+            </div>
+            
+            <div class="pt-6 border-t border-linen">
+              <a href="mayatt.html" class="w-full sm:w-auto bg-navy hover:bg-gold text-cream hover:text-navy text-xs font-bold uppercase tracking-widest px-8 py-3.5 transition-all duration-300 flex items-center justify-center space-x-2 inline-flex">
+                <span>Ver Detalles</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 2: PROYECTO FUTURO (Próximamente) -->
+        <div class="project-slide flex flex-col lg:flex-row gap-8 lg:gap-16 transition-all duration-500 opacity-0 hidden">
+          <!-- Columna Imagen -->
+          <div class="lg:w-7/12 relative aspect-[16/10] overflow-hidden border border-linen p-2 bg-cream flex items-center justify-center">
+            <div class="absolute inset-0 bg-navy/10 backdrop-blur-sm z-10 flex flex-col items-center justify-center text-navy/80 space-y-3">
+              <i class="fa-solid fa-lock text-3xl text-gold"></i>
+              <span class="text-xs uppercase tracking-widest font-bold text-navy">Lanzamiento Privado</span>
+            </div>
+            <img src="IMAGEN BANNER HERO.jpeg" alt="Proyecto Futuro" class="w-full h-full object-cover opacity-30" onerror="this.src='https://placehold.co/800x500/0d1b2a/e5ba73?text=PROXIMAMENTE'">
+          </div>
+          <!-- Columna Texto -->
+          <div class="lg:w-5/12 flex flex-col justify-between space-y-6 lg:space-y-0">
+            <div class="space-y-6">
+              <div class="border-b border-linen pb-4">
+                <span class="text-xs text-gold uppercase tracking-widest font-semibold block mb-1">PROYECTO FUTURO</span>
+                <h3 class="text-4xl font-serif-editorial text-navy">Proyecto Futuro</h3>
+              </div>
+              <p class="text-sm text-navy/55 leading-relaxed font-light uppercase tracking-widest">
+                Próximamente
+              </p>
+            </div>
+            
+            <div class="pt-6 border-t border-linen">
+              <button disabled class="w-full sm:w-auto border border-linen text-navy/40 text-xs font-bold uppercase tracking-widest px-8 py-3.5 cursor-not-allowed flex items-center justify-center space-x-2">
+                <span>Próximamente</span>
+                <i class="fa-solid fa-lock text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYECTO 3: PROYECTO FUTURO (Próximamente) -->
+        <div class="project-slide flex flex-col lg:flex-row gap-8 lg:gap-16 transition-all duration-500 opacity-0 hidden">
+          <!-- Columna Imagen -->
+          <div class="lg:w-7/12 relative aspect-[16/10] overflow-hidden border border-linen p-2 bg-cream flex items-center justify-center">
+            <div class="absolute inset-0 bg-navy/10 backdrop-blur-sm z-10 flex flex-col items-center justify-center text-navy/80 space-y-3">
+              <i class="fa-solid fa-lock text-3xl text-gold"></i>
+              <span class="text-xs uppercase tracking-widest font-bold text-navy">Fase de Planificación</span>
+            </div>
+            <img src="Mayatt portada.jpeg" alt="Proyecto Futuro" class="w-full h-full object-cover opacity-20 grayscale" onerror="this.src='https://placehold.co/800x500/0d1b2a/e5ba73?text=PROXIMAMENTE'">
+          </div>
+          <!-- Columna Texto -->
+          <div class="lg:w-5/12 flex flex-col justify-between space-y-6 lg:space-y-0">
+            <div class="space-y-6">
+              <div class="border-b border-linen pb-4">
+                <span class="text-xs text-gold uppercase tracking-widest font-semibold block mb-1">PROYECTO FUTURO</span>
+                <h3 class="text-4xl font-serif-editorial text-navy">Proyecto Futuro</h3>
+              </div>
+              <p class="text-sm text-navy/55 leading-relaxed font-light uppercase tracking-widest">
+                Próximamente
+              </p>
+            </div>
+            
+            <div class="pt-6 border-t border-linen">
+              <button disabled class="w-full sm:w-auto border border-linen text-navy/40 text-xs font-bold uppercase tracking-widest px-8 py-3.5 cursor-not-allowed flex items-center justify-center space-x-2">
+                <span>Próximamente</span>
+                <i class="fa-solid fa-lock text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slider Controls (Editorial Fine Style) -->
+      <div class="mt-8 pt-6 border-t border-linen flex items-center justify-between">
+        <!-- Pagination text -->
+        <span id="project-slide-index" class="text-xs font-semibold tracking-luxury text-navy">01 / 03</span>
+        
+        <!-- Dots -->
+        <div class="flex space-x-2 mx-auto">
+          <button onclick="showProjectSlide(0)" class="project-dot w-2 h-2 rounded-full bg-gold transition-all duration-300" aria-label="Slide 1"></button>
+          <button onclick="showProjectSlide(1)" class="project-dot w-2 h-2 rounded-full bg-navy/20 transition-all duration-300" aria-label="Slide 2"></button>
+          <button onclick="showProjectSlide(2)" class="project-dot w-2 h-2 rounded-full bg-navy/20 transition-all duration-300" aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: ¿POR QUÉ INVERTIR EN LOTES? -->
+  <section id="invertir" class="py-24 max-w-7xl mx-auto px-6 lg:px-12 border-b border-linen">
+    
+    <div class="max-w-4xl mx-auto text-center space-y-6 mb-20">
+      <p class="text-[10px] font-bold tracking-widest text-gold uppercase">La decisión correcta</p>
+      <h2 class="text-4xl md:text-5xl font-serif-editorial text-navy font-light leading-tight">
+        Planificación que Protege su Patrimonio
+      </h2>
+      <p class="text-base text-navy/70 leading-relaxed font-light italic">
+        "Invertir en un lote dentro de un condominio es una decisión distinta a comprar tierra sin planificación. Aquí hay reglas, diseño y una visión común que protege la inversión en el tiempo."
+      </p>
+    </div>
+
+    <!-- Pilares de Inversión -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+      
+      <!-- Pilar 1 -->
+      <div class="space-y-4 relative">
+        <div class="text-6xl font-serif-editorial font-light text-gold/30">I</div>
+        <h3 class="text-xl font-serif-editorial font-semibold text-navy border-b border-linen pb-3">
+          Planeación y orden urbano
+        </h3>
+        <p class="text-sm text-navy/70 leading-relaxed font-light">
+          Nuestros proyectos están desarrollados como condominios, con vías internas, zonas comunes y normas de construcción definidas desde el inicio. Esto evita el desorden, mantiene la armonía del proyecto y favorece la valorización.
+        </p>
+      </div>
+
+      <!-- Pilar 2 -->
+      <div class="space-y-4 relative">
+        <div class="text-6xl font-serif-editorial font-light text-gold/30">II</div>
+        <h3 class="text-xl font-serif-editorial font-semibold text-navy border-b border-linen pb-3">
+          Construcción con lineamientos claros
+        </h3>
+        <p class="text-sm text-navy/70 leading-relaxed font-light">
+          Cada condominio cuenta con estilos de fachada y reglas arquitectónicas que deben respetarse al construir. Esto garantiza coherencia visual, cuida el entorno y protege el valor de cada propiedad.
+        </p>
+      </div>
+
+      <!-- Pilar 3 -->
+      <div class="space-y-4 relative">
+        <div class="text-6xl font-serif-editorial font-light text-gold/30">III</div>
+        <h3 class="text-xl font-serif-editorial font-semibold text-navy border-b border-linen pb-3">
+          Valorización con fundamento real
+        </h3>
+        <p class="text-sm text-navy/70 leading-relaxed font-light">
+          La valorización no depende solo del mercado, sino de la ubicación, el desarrollo del proyecto y el control constructivo. Un condominio bien planificado tiende a sostener y mejorar su valor con el tiempo.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: SOBRE NOSOTROS -->
+  <section id="nosotros" class="py-24 bg-white border-b border-linen">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Columna Texto -->
+      <div class="lg:col-span-7 space-y-6">
+        <p class="text-[10px] font-bold tracking-widest text-gold uppercase">Filosofía Inmobiliaria</p>
+        <h2 class="text-4xl md:text-5xl font-serif-editorial font-light text-navy leading-tight">
+          Seguridad, Planificación y Plusvalía a Largo Plazo
+        </h2>
+        
+        <p class="text-sm md:text-base text-navy/70 leading-relaxed font-light">
+          Somos una empresa dedicada a acompañar decisiones de inversión en lotes en condominio, con enfoque en legalidad, planificación y desarrollo a largo plazo. Nuestro trabajo es seleccionar proyectos bien estructurados, con reglas claras y ubicación estratégica, para que invertir y construir sea un proceso seguro y con plusvalía garantizada.
+        </p>
+
+        <!-- Garantías con Checkmarks Finos (Estilo badges de revista) -->
+        <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex items-center space-x-3 border-l border-gold pl-4 py-2">
+            <span class="text-gold text-xs uppercase tracking-widest font-semibold block">Garantía Legal</span>
+            <span class="text-[10px] text-navy/60 block">Legalidad 100% en proyectos</span>
+          </div>
+          <div class="flex items-center space-x-3 border-l border-gold pl-4 py-2">
+            <span class="text-gold text-xs uppercase tracking-widest font-semibold block">Ubicación</span>
+            <span class="text-[10px] text-navy/60 block">Alto potencial de valorización</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Métricas (Estilo editorial con líneas finas) -->
+      <div class="lg:col-span-5 bg-cream border border-linen p-8 lg:p-12 space-y-8 flex flex-col justify-center">
+        <h3 class="text-lg font-serif-editorial tracking-widest uppercase text-navy border-b border-gold pb-4 text-center">
+          Nuestras Métricas
+        </h3>
+
+        <!-- Métrica 1 -->
+        <div class="text-center py-2 border-b border-linen">
+          <div class="text-4xl font-serif-editorial font-light text-navy tracking-tight">10+ Años</div>
+          <div class="text-[10px] uppercase tracking-widest text-navy/55 mt-1">Años de experiencia</div>
+        </div>
+
+        <!-- Métrica 2 -->
+        <div class="text-center py-2 border-b border-linen">
+          <div class="text-4xl font-serif-editorial font-light text-navy tracking-tight">250+</div>
+          <div class="text-[10px] uppercase tracking-widest text-navy/55 mt-1">Familias Satisfechas</div>
+        </div>
+
+        <!-- Métrica 3 -->
+        <div class="text-center py-2">
+          <div class="text-4xl font-serif-editorial font-light text-navy tracking-tight">15% - 18%</div>
+          <div class="text-[10px] uppercase tracking-widest text-navy/55 mt-1">Plusvalía Anual Promedio</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: PREGUNTAS FRECUENTES (FAQ) -->
+  <section id="faq" class="py-24 max-w-5xl mx-auto px-6 border-b border-linen">
+    
+    <div class="text-center space-y-3 mb-16">
+      <p class="text-[10px] font-bold tracking-widest text-gold uppercase">Respuestas Claras</p>
+      <h2 class="text-4xl md:text-5xl font-serif-editorial font-light text-navy">
+        Preguntas Frecuentes
+      </h2>
+      <div class="w-12 h-px bg-gold mx-auto mt-4"></div>
+    </div>
+
+    <!-- Acordeón FAQ -->
+    <div class="space-y-0 border-t border-linen">
+      
+      <!-- FAQ 1 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Qué diferencia hay entre comprar un lote en condominio y un lote común?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            Un lote en condominio forma parte de un proyecto planificado con normas de construcción, zonas comunes, vías internas y reglas arquitectónicas definidas. Esto garantiza orden, valorización sostenida y protección de la inversión, a diferencia de un lote común sin planificación.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Los proyectos cuentan con todos los permisos legales? / ¿Qué documentos legales respaldan la compra?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            Sí. Absolutamente todos nuestros lotes cuentan con licencias urbanísticas aprobadas, escrituras públicas registradas e individuales, y el reglamento de propiedad horizontal debidamente constituido. Al momento de la compra, se proporciona el certificado de tradición y libertad correspondiente y toda la documentación para el estudio de títulos correspondiente.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Puedo construir libremente en mi lote?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            Es posible construir la propiedad a tu gusto, respetando los manuales de convivencia y construcción específicos del condominio. Estos lineamientos regulan aspectos de armonía visual, como alturas máximas, retiros de linderos, porcentaje de ocupación y estilos de fachada, lo cual es la clave para la valorización colectiva del proyecto.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Cómo funciona la valorización en estos proyectos? / ¿Cuál es la plusvalía promedio anual?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            La valorización se dinamiza mediante el avance de las obras del condominio (redes de servicios, vías, club social, etc.) y el desarrollo de infraestructura de la zona de influencia. Los proyectos en estas áreas del Caribe registran una plusvalía anual promedio de entre el 12% y el 18%, siendo de los activos más rentables y seguros.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Cuánto tiempo tengo para construir?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            No exigimos un tiempo límite para comenzar a edificar tu vivienda. Puedes adquirir el lote únicamente como inversión para aprovechar la plusvalía de lanzamiento, o bien planificar la construcción de tu casa ideal a mediano o largo plazo sin presiones contractuales.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Ofrecen opciones de financiamiento?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            Sí. Contamos con planes de financiación directa del proyecto con plazos muy flexibles de pago de cuota inicial y financiación a cuotas mensuales sin necesidad de trámites bancarios engorrosos. También trabajamos en conjunto con entidades bancarias para la aprobación de créditos constructores.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Qué pasa si no construyo de inmediato?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            Tu propiedad continuará ganando valor de forma constante a medida que el desarrollo general del condominio avance. Solo es necesario cubrir la cuota de administración ordinaria correspondiente para el sostenimiento de las áreas comunes, seguridad privada 24/7 y mantenimiento general del proyecto.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="border-b border-linen py-6 class-faq-item">
+        <button class="w-full flex items-center justify-between text-left focus:outline-none group" onclick="toggleFaq(this)">
+          <h3 class="text-lg font-serif-editorial font-medium text-navy group-hover:text-gold transition duration-300">
+            ¿Cuáles son los costos adicionales además del precio del lote?
+          </h3>
+          <span class="text-gold text-lg transition-transform duration-300 icon-faq"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+          <p class="pt-4 text-sm text-navy/70 leading-relaxed font-light">
+            Los gastos adicionales son los tradicionales de una transacción inmobiliaria: derechos notariales, impuesto de registro y beneficencia (que suman aproximadamente del 3.5% al 4% del valor del negocio) e impuesto predial anualizado.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="py-24 max-w-4xl mx-auto px-6">
+    <div class="bg-white border border-linen p-8 md:p-16 space-y-12">
+      
+      <!-- Textos -->
+      <div class="text-center space-y-4">
+        <p class="text-[10px] font-bold tracking-widest text-gold uppercase">Asesoría Inmobiliaria Exclusiva</p>
+        <h2 class="text-4xl font-serif-editorial text-navy leading-none">Inicie su próximo proyecto</h2>
+        <p class="text-sm text-navy/60 max-w-md mx-auto leading-relaxed font-light">
+          Estamos listos para asesorarte en tu próxima inversión inmobiliaria. Completa el formulario y nuestro equipo se pondrá en contacto contigo.
+        </p>
+      </div>
+
+      <!-- Formulario -->
+      <form id="contact-form" class="space-y-8" onsubmit="handleFormSubmit(event)">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Nombre -->
+          <div class="flex flex-col">
+            <label for="name" class="text-[10px] uppercase tracking-widest text-navy/55 font-bold mb-1">Nombre Completo</label>
+            <input type="text" id="name" required class="input-editorial text-navy text-sm font-light" placeholder="Ej. Alejandra García">
+          </div>
+          <!-- Correo -->
+          <div class="flex flex-col">
+            <label for="email" class="text-[10px] uppercase tracking-widest text-navy/55 font-bold mb-1">Correo Electrónico</label>
+            <input type="email" id="email" required class="input-editorial text-navy text-sm font-light" placeholder="Ej. alejandra@email.com">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Teléfono -->
+          <div class="flex flex-col">
+            <label for="phone" class="text-[10px] uppercase tracking-widest text-navy/55 font-bold mb-1">Teléfono Móvil</label>
+            <input type="tel" id="phone" required class="input-editorial text-navy text-sm font-light" placeholder="Ej. +57 300 000 0000">
+          </div>
+          <!-- Proyecto de Interés -->
+          <div class="flex flex-col">
+            <label for="project" class="text-[10px] uppercase tracking-widest text-navy/55 font-bold mb-1">Proyecto de Interés</label>
+            <select id="project" required class="input-editorial text-navy text-sm font-light appearance-none cursor-pointer">
+              <option value="" disabled selected class="text-navy/40">Seleccione un proyecto</option>
+              <option value="Mayatt" class="text-navy">Mayatt (Disponible)</option>
+              <option value="Proyecto Futuro" class="text-navy">Proyecto Futuro (Próximamente)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="flex flex-col">
+          <label for="message" class="text-[10px] uppercase tracking-widest text-navy/55 font-bold mb-1">Mensaje</label>
+          <textarea id="message" rows="4" required class="input-editorial text-navy text-sm font-light resize-none" placeholder="Cuéntanos sobre tu interés en invertir..."></textarea>
+        </div>
+
+        <!-- Botón de Envío -->
+        <div class="text-center pt-4">
+          <button type="submit" class="w-full sm:w-auto bg-navy hover:bg-navy-light text-cream hover:text-gold text-xs font-bold uppercase tracking-[0.2em] px-12 py-4 transition-all duration-300 border border-navy hover:border-gold">
+            Enviar Mensaje
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Mensaje de Éxito Oculto -->
+      <div id="form-success" class="hidden text-center py-12 space-y-4 animate-[fadeIn_0.5s_ease-out]">
+        <div class="w-16 h-16 bg-gold/15 text-gold rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fa-solid fa-check text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-serif-editorial text-navy">¡Mensaje Recibido!</h3>
+        <p class="text-sm text-navy/70 max-w-sm mx-auto font-light leading-relaxed">
+          Muchas gracias por tu interés, <span id="success-client-name" class="font-semibold text-navy"></span>. Nos pondremos en contacto contigo en las próximas horas para brindarte una asesoría personalizada.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: FOOTER (PIE DE PÁGINA) -->
+  <footer class="bg-navy text-cream border-t-2 border-gold/40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 border-b border-cream/10">
+      
+      <!-- Columna 1: Logo y Bio -->
+      <div class="lg:col-span-4 space-y-6">
+        <img src="MARLYN POLO IMB AL LOGO-01.svg" alt="Merlyn Polo Olaya Logo" class="h-24 w-auto object-contain brightness-0 invert" onerror="this.src='https://placehold.co/180x180/0d1b2a/e5ba73?text=MERLYN+POLO'">
+        <p class="text-xs text-linen/70 leading-relaxed font-light">
+          Especialistas en inversión inmobiliaria con proyectos de lotes en condominio. Planificación, seguridad legal y alta rentabilidad en zonas exclusivas del Caribe colombiano.
+        </p>
+        <!-- Iconos Sociales -->
+        <div class="flex items-center space-x-4 pt-2">
+          <a href="https://instagram.com/agenteinmobiliario.merlynpolo" target="_blank" class="text-cream hover:text-gold transition text-lg" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/573024347609?text=Hola%20Merlyn,%20estoy%20interesado%20en%20los%20proyectos%20inmobiliarios." target="_blank" class="text-cream hover:text-gold transition text-lg" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="text-cream hover:text-gold transition text-lg" aria-label="Web">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </div>
+        <!-- Aliados Propfy -->
+        <div class="pt-6 border-t border-cream/10 mt-6 space-y-2">
+          <span class="text-[10px] uppercase tracking-widest text-gold font-bold block">Aliados Propfy</span>
+          <img src="LOGO-PFY-BLANCO.svg" alt="Logo Propfy" class="h-8 w-auto object-contain">
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="lg:col-span-2 space-y-4">
+        <h4 class="text-xs uppercase tracking-widest text-gold font-bold">Navegación</h4>
+        <ul class="space-y-2.5 text-xs font-light text-linen/80">
+          <li><a href="#inicio" class="hover:text-gold transition">Inicio</a></li>
+          <li><a href="#proyectos" class="hover:text-gold transition">Proyectos</a></li>
+          <li><a href="#nosotros" class="hover:text-gold transition">Nosotros</a></li>
+          <li><a href="#invertir" class="hover:text-gold transition">¿Por qué invertir?</a></li>
+          <li><a href="#faq" class="hover:text-gold transition">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Proyectos -->
+      <div class="lg:col-span-2 space-y-4">
+        <h4 class="text-xs uppercase tracking-widest text-gold font-bold">Proyectos</h4>
+        <ul class="space-y-2.5 text-xs font-light text-linen/80">
+          <li><a href="#proyectos" class="hover:text-gold transition">Mayatt</a></li>
+          <li class="text-linen/40">Proyecto Futuro</li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Información de Contacto -->
+      <div class="lg:col-span-4 space-y-4">
+        <h4 class="text-xs uppercase tracking-widest text-gold font-bold">Contacto Directo</h4>
+        <ul class="space-y-3 text-xs font-light text-linen/80">
+          <li class="flex items-start space-x-2">
+            <i class="fa-solid fa-user text-gold mt-0.5"></i>
+            <span><strong>Agente:</strong> Merlyn Polo Olaya</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <i class="fa-brands fa-whatsapp text-gold mt-0.5"></i>
+            <a href="https://wa.me/573024347609?text=Hola%20Merlyn,%20estoy%20interesado%20en%20los%20proyectos%20inmobiliarios." target="_blank" class="hover:text-gold transition">+57 302 434 7609</a>
+          </li>
+          <li class="flex items-start space-x-2">
+            <i class="fa-solid fa-envelope text-gold mt-0.5"></i>
+            <a href="mailto:agenteinmobiliariompolo@gmail.com" class="hover:text-gold transition break-all">agenteinmobiliariompolo@gmail.com</a>
+          </li>
+          <li class="flex items-start space-x-2">
+            <i class="fa-solid fa-location-dot text-gold mt-0.5"></i>
+            <span>Urb. Los Jardines MzDL-6</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <i class="fa-solid fa-building text-gold mt-0.5"></i>
+            <span>Kra 36 N. 247- 37 Conjunto Residencial Puntalta Altagracia apto 110 torre 2.</span>
+          </li>
+          <li class="flex items-start space-x-2">
+            <i class="fa-solid fa-clock text-gold mt-0.5"></i>
+            <span>Lun a Vie: 9:00 AM - 7:00 PM<br>Sáb: 9:00 AM - 5:00 PM</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Strip -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col sm:flex-row items-center justify-between text-[10px] text-linen/40 tracking-wider">
+      <p>© 2026 Merlyn Polo Olaya. Todos los derechos reservados.</p>
+      <div class="flex items-center space-x-4 mt-4 sm:mt-0">
+        <a href="https://instagram.com/agenteinmobiliario.merlynpolo" target="_blank" class="hover:text-gold transition">Instagram</a>
+        <span>|</span>
+        <a href="#" class="hover:text-gold transition">Portal de Inmuebles</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS INTERACTIVOS (Vanilla JS) -->
+  <script>
+    // ----------------------------------------------------
+    // MENÚ MÓVIL
+    // ----------------------------------------------------
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMobileMenu() {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('opacity-100');
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+    }
+
+    if (mobileMenuBtn && closeMenuBtn) {
+      mobileMenuBtn.addEventListener('click', openMobileMenu);
+      closeMenuBtn.addEventListener('click', closeMobileMenu);
+    }
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // ----------------------------------------------------
+    // FAQ ACCORDION
+    // ----------------------------------------------------
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.icon-faq i');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-content').forEach(item => {
+        if (item !== content) {
+          item.style.maxHeight = null;
+          const otherIcon = item.previousElementSibling.querySelector('.icon-faq i');
+          if (otherIcon) {
+            otherIcon.className = 'fa-solid fa-plus';
+          }
+        }
+      });
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        if (icon) icon.className = 'fa-solid fa-plus';
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (icon) icon.className = 'fa-solid fa-minus';
+      }
+    }
+
+    // ----------------------------------------------------
+    // PROJECTS SLIDER
+    // ----------------------------------------------------
+    let currentProjectIndex = 0;
+    const projectSlides = document.querySelectorAll('.project-slide');
+    const projectDots = document.querySelectorAll('.project-dot');
+    const projectSlideIndexText = document.getElementById('project-slide-index');
+
+    function showProjectSlide(index) {
+      if (index >= projectSlides.length) {
+        currentProjectIndex = 0;
+      } else if (index < 0) {
+        currentProjectIndex = projectSlides.length - 1;
+      } else {
+        currentProjectIndex = index;
+      }
+
+      projectSlides.forEach((slide, i) => {
+        if (i === currentProjectIndex) {
+          slide.classList.remove('opacity-0', 'hidden');
+          slide.classList.add('opacity-100', 'flex');
+        } else {
+          slide.classList.remove('opacity-100', 'flex');
+          slide.classList.add('opacity-0', 'hidden');
+        }
+      });
+
+      // Update dots
+      projectDots.forEach((dot, i) => {
+        if (i === currentProjectIndex) {
+          dot.classList.remove('bg-navy/20');
+          dot.classList.add('bg-gold');
+        } else {
+          dot.classList.remove('bg-gold');
+          dot.classList.add('bg-navy/20');
+        }
+      });
+
+      // Update indicator text
+      if (projectSlideIndexText) {
+        projectSlideIndexText.textContent = `0${currentProjectIndex + 1} / 0${projectSlides.length}`;
+      }
+    }
+
+    function nextProjectSlide() {
+      showProjectSlide(currentProjectIndex + 1);
+    }
+
+    function prevProjectSlide() {
+      showProjectSlide(currentProjectIndex - 1);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      showProjectSlide(0);
+    });
+
+    // ----------------------------------------------------
+    // FORM SUBMISSION
+    // ----------------------------------------------------
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = document.getElementById('contact-form');
+      const successDiv = document.getElementById('form-success');
+      const clientNameSpan = document.getElementById('success-client-name');
+      const nameInput = document.getElementById('name');
+
+      if (clientNameSpan && nameInput) {
+        clientNameSpan.textContent = nameInput.value;
+      }
+
+      if (form && successDiv) {
+        form.classList.add('hidden');
+        successDiv.classList.remove('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>
